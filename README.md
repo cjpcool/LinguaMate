@@ -1,4 +1,4 @@
-# 🧠 MetaSymbO: Language-Guided Metamaterial Discovery via Symbolic-Driven Latent Optimization
+# MetaSymbO: Language-Guided Metamaterial Discovery via Symbolic-Driven Latent Optimization
 
 This script performs **MetaSymbO** using a end-to-end collaborative method.  
 It enables **end-to-end structure generation** driven by symbolic logic and latent optimization through interactions among:
