@@ -35,7 +35,7 @@ latent_dim=128
 # --------------
 #   Load data
 # --------------
-dataset = LatticeModulus('/home/jianpengc/datasets/metamaterial/LatticeModulus', file_name='data')
+dataset = LatticeModulus('[your data path]/LatticeModulus', file_name='data')
 # dataset = LatticeModulus('D:\\项目\\Material design\\code_data\\data\\LatticeModulus',file_name='data_new')
 indices = []
 for i, data in enumerate(tqdm(dataset)):
