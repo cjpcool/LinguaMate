@@ -43,7 +43,7 @@ def parse_args() -> argparse.Namespace:
 
     # data settings
     parser.add_argument("--dataset_path",  required=True, type=Path,
-                        default=Path("/home/jianpengc/datasets/metamaterial/LatticeModulus"))
+                        default=Path("/home/username/datasets/metamaterial/LatticeModulus"))
     
     parser.add_argument("--file_name",     default="data")
     parser.add_argument("--select_max_node_num", type=int, default=30)
