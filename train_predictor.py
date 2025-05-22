@@ -35,8 +35,7 @@ latent_dim=128
 # --------------
 #   Load data
 # --------------
-dataset = LatticeModulus('/home/jianpengc/datasets/metamaterial/LatticeModulus', file_name='data')
-# dataset = LatticeModulus('D:\\项目\\Material design\\code_data\\data\\LatticeModulus',file_name='data_new')
+dataset = LatticeModulus('[your data path]/LatticeModulus', file_name='data')
 indices = []
 for i, data in enumerate(tqdm(dataset)):
     if data.num_atoms <= sample_max_num_nodes and data.num_edges <= sample_max_num_nodes * 2:
