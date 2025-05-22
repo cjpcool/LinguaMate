@@ -37,7 +37,7 @@ Note: Sometimes there will be network error. Please try again after wait for sev
 ```bash
 python run_modal_agent.py \
   -prompt "Design a structure with high stiffness, with less nodes." \
-  -dataset_path "/home/jianpengc/datasets/metamaterial/LatticeModulus" \
+  -dataset_path "[Your path]/LatticeModulus" \
   -api_key <your_openai_api_key> \
   -save_dir results/lattices \
   -verbose True   # optional. if do not want to visualize, omit this param. 
@@ -47,7 +47,7 @@ python run_modal_agent.py \
 
 Runing example:
 ```bash
-python run_modal_agent.py   --prompt "Design a structure with high stiffness, with less nodes."   --dataset_path "/home/jianpengc/datasets/metamaterial/LatticeModulus"   --api_key "" --save_dir "results/lattices" --verbose "True"
+python run_modal_agent.py   --prompt "Design a structure with high stiffness, with less nodes."   --dataset_path "[Your path]/LatticeModulus"   --api_key "" --save_dir "results/lattices" --verbose "True"
 ```
 
 
