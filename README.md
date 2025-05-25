@@ -32,7 +32,9 @@ Then, run datasets/dataset_truss.py,  the data will be automatically downloaded 
 Note: Sometimes there will be network error. Please try again after waiting for several minutes.
 
 ## Checkpoints
-We will update the checkpoints via public links after the paper is accepted. In the current phase, please (1) set the root path in script, and (2) run "train_ae.py" and "train_predictor.py" to make a VAE checkpoint of Agent 2 (generator), and the predictor in Agent 3 (Supervisor).
+We will update the checkpoints via public links after the paper is accepted. 
+
+In the current phase, please (1) set the root path in scripts "train_ae.py" and "train_predictor.py", and (2) run "train_ae.py" and "train_predictor.py" to make a VAE checkpoint of Agent 2 (generator), and the predictor in Agent 3 (Supervisor).
 
 
 ## Usage
