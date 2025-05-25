@@ -250,8 +250,8 @@ def main():
     from torch_geometric.loader import DataLoader
     from utils.lattice_utils import plot_lattice
     # data_augmentation(max_num_nodes=15)
-    # dataset = LatticeModulus('D:\\项目\\Material design\\code_data\\data\\LatticeModulus',file_name='data_new')
-    root = '/home/jianpengc/datasets/metamaterial/LatticeModulus'
+    # dataset = LatticeModulus('[Data root path]\\LatticeModulus',file_name='data')
+    root = '[Data root path]/LatticeModulus'
     dataset = LatticeModulus(root,file_name='data')
     
 
