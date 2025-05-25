@@ -15,14 +15,13 @@ It enables **end-to-end structure generation** driven by symbolic logic and late
 * Python ≥ 3.8  
 * PyTorch  == torch2.4
 * torch_geometric and its dependencies for torch2.4
-* OpenAI API key (for the chosen GPT models). Alternatively use other AI APIs and revise related codes.  
-* Pre-processed dataset compatible with `LatticeModulus`.
+* OpenAI API key (for the chosen GPT models). Alternatively, use other AI APIs and revise related code.
 
 ---
 ## Dataset
-To download dataset, Please revise "datasets/dataset_truss.py" 
+To download dataset, please revise "datasets/dataset_truss.py" 
 ```
-root = '/home/jianpengc/datasets/metamaterial/LatticeModulus'
+root = '[Your data path]/LatticeModulus'
 ```
 to 
 ```
@@ -30,7 +29,11 @@ root = 'your dataset path'
 ```
 Then, run datasets/dataset_truss.py,  the data will be automatically downloaded and preprocessed.
 
-Note: Sometimes there will be network error. Please try again after wait for several minutes.
+Note: Sometimes there will be network error. Please try again after waiting for several minutes.
+
+## Checkpoints
+We will update the checkpoints via public links after the paper is accepted. In the current phase, please (1) set the root path in script, and (2) run "train_ae.py" and "train_predictor.py" to make a VAE checkpoint of Agent 2 (generator), and the predictor in Agent 3 (Supervisor).
+
 
 ## Usage
 
