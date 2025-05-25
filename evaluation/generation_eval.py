@@ -536,7 +536,7 @@ if __name__ == '__main__':
     Connectivity rate: 1.0
     Dangling rate: 0.0
     '''
-    dataset = LatticeModulus('/home/jianpengc/datasets/metamaterial/LatticeModulus',file_name='data')
+    dataset = LatticeModulus('[Your data root path]/LatticeModulus',file_name='data')
     indices = []
     for i, data in enumerate(tqdm(dataset)):
         if data.num_atoms <= MAX_NODE_NUM and data.num_edges <= MAX_NODE_NUM * 2:
@@ -544,22 +544,9 @@ if __name__ == '__main__':
     dataset = dataset[indices]
     split_dict = dataset.get_idx_split(len(dataset), 8000, 1, seed=42)
     test_data = dataset[split_dict['test'].tolist()]
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/cond_gen_results',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/cond_gen_results_gpt-4o-mini',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/cond_gen_results_gpt-4o-mini_union',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/cond_gen_results_gemini-2.0-flash-lite_union',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/cond_gen_results_gpt-4o-mini_union',)
-
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/gpt-40-mini',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/gemini-2.0-flash-lite_property_guidance',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/cond_gen_results_gemini-2.0-flash-lite',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/deepseek-chat_property_guidance',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/qwen3-235b-a22b_property_guidance',)
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:/ModalAgent/evaluation/llama-4-maverick_property_guidance',)
-
-    # evaluator = LatticeEvaluator(test_datset=dataset[:1000], eval_file_path='D:\ModalAgent\evaluation\ours_prompt_guidance\structures_union_gemini-2.0-flash_100',)
+    
     evaluator = LatticeEvaluator(test_datset=dataset[:1000], \
-                                 eval_file_path='D:\ModalAgent\evaluation\ours_prompt_guidance\structures_union_gpt-4o-mini_100',)
+                                 eval_file_path='[root path]\evaluation\ours_prompt_guidance\structures_union_gpt-4o-mini_100',)
 
 
     evaluator.evaluate_all_uncondition_generation()
