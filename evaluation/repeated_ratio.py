@@ -42,27 +42,6 @@ def compute_repeated_ratio(coords, edge_indexs, lengths, angles, dist_threshold=
     print('repeated_num', repeated_num)
     print('len(coords)', len(coords))
     return repeated_ratio
-                
-
-
-
-
-
-
-
-
-
-    return 0.0
-
-
-
-
-
-
-
-
-
-
 
 
 
