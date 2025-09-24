@@ -1,6 +1,6 @@
 # LinguaMate: Language-Guided Metamaterial Discovery via Symbolic-Driven Latent Optimization
 
-This script performs **MetaSymbO** using a end-to-end collaborative method.  
+This script performs **LinguaMate** using a end-to-end collaborative method.  
 It enables **end-to-end structure generation** driven by symbolic logic and latent optimization through interactions among:
 
 * **Designer Agent** – formulates prompts (e.g., *gpt-4o-mini*)  
@@ -85,6 +85,7 @@ python run_modal_agent.py   --prompt "Design a structure with high stiffness, wi
 * **Generated structures** saved in `save_dir`  
 * **Logs** detailing collaboration loops and evaluations  
 * Structures satisfy both **semantic** (prompt) and **physical** (property) constraints
+
 
 
 
