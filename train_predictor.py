@@ -72,8 +72,8 @@ model = model.to(device)
 normalizer = normalizer.to(device)
 if use_wandb:
     wandb.init(
-            entity='jianpengc',
-            project='GeomVAE_Predictor',
+            entity='',
+            project='',
             name=save_name+'-'+datetime.datetime.now().strftime('%Y-%m-%d--%H:%M'),
         )
 
@@ -127,6 +127,7 @@ for epoch in range(epoch):
     if use_wandb:
         wandb.log({"train_loss": train_loss})
         wandb.log({"epoch": epoch})
+
 
 
 
