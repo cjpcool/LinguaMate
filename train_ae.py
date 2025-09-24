@@ -36,7 +36,6 @@ latent_dim=128
 #   Load data
 # --------------
 dataset = LatticeModulus('[your data path]/LatticeModulus', file_name='data')
-# dataset = LatticeModulus('D:\\项目\\Material design\\code_data\\data\\LatticeModulus',file_name='data_new')
 indices = []
 for i, data in enumerate(tqdm(dataset)):
     if data.num_atoms <= sample_max_num_nodes and data.num_edges <= sample_max_num_nodes * 2:
@@ -70,8 +69,8 @@ print("Start training...")
 # model.load_state_dict(torch.load(root+f'/checkpoints/{load_name}/best_ae_model.pt', map_location=device))
 if use_wandb:
     wandb.init(
-            entity='jianpengc',
-            project='GeomVAE_VAE',
+            entity='',
+            project='',
             name=save_name+'-'+datetime.datetime.now().strftime('%Y-%m-%d--%H:%M'),
         )
 
@@ -90,6 +89,7 @@ lengths_pred, angles_pred = normalizer.denormalize(lengths_pred, angles_pred)
 print("Sampled node numbers: ", node_num_pred)
 print("Sampled lengths: ", lengths_pred)
 print("Sampled angles: ", angles_pred)
+
 
 
 
